@@ -1,0 +1,42 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@font-face {
+  font-family: "Laughing and Smiling";
+  src: url("../../static/fonts/LaughingAndSmiling/laughing_and_smiling-webfont.woff") format("woff");
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo-font {
+    font-family: "Laughing and Smiling";
+}
+
+.color-a {
+    color: #66aae6;
+}
+
+.color-b {
+    color: #4d6b96;
+}
+
+.color-c {
+    color: #4a7367;
+}
+
+.bg-color-a {
+    background-color: #66aae6;
+}
+
+.bg-color-b {
+    background-color: #4d6b96;
+}
+
+.bg-color-c {
+    background-color: #4a7367;
+}
