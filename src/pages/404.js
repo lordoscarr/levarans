@@ -1,16 +1,29 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react"
+import { Link } from "gatsby"
 import Layout from "../components/Layout"
-import notFoundStyles from '../styles/pages/404.module.scss'
+import useSiteMetadata from "../static_queries/useSiteMetadata"
 
 export default function NotFound() {
-    return (
-        <Layout page="404" bgColor="inherit">
-            <div className={notFoundStyles.notFound__container}>
-                <Link to="/">
-                    <h1>Sorry, couldn't find that page.</h1>
-                </Link>
-            </div>
-        </Layout>
-    )
+    const siteMetadata = useSiteMetadata()
+
+  return (
+    <>
+      <header className="navbar"></header>
+      <main className="flex items-center flex-col">
+        <div className="container w-4/5 md:w-1/2 lg:w-1/3 my-16">
+          <div className="header-container">
+            <h1 className="header-title text-6xl logo-font text-center p-4 text-white">
+              {siteMetadata.title}
+            </h1>
+            <p className="header-title text-m text-center text-white">
+              {siteMetadata.description}
+            </p>
+          </div>
+          <div className="form-container bg-white rounded-lg p-6 my-16 shadow-xl">
+            <p className="text-center">Oops! Kunde inte hitta sidan.</p>
+          </div>
+        </div>
+      </main>
+    </>
+  )
 }

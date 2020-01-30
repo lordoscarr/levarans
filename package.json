@@ -16,10 +16,14 @@
     "forestry-preview": "gatsby develop -p 8080 -H 0.0.0.0"
   },
   "dependencies": {
+    "autoprefixer": "^9.7.4",
+    "emailjs-com": "^2.4.1",
     "gatsby": "^2.13.9",
     "gatsby-image": "^2.2.8",
+    "gatsby-plugin-postcss": "^2.1.19",
+    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-react-helmet": "^3.1.0",
-    "gatsby-plugin-sass": "^2.1.0",
+    "gatsby-plugin-sass": "^2.1.27",
     "gatsby-plugin-sharp": "^2.2.3",
     "gatsby-remark-images": "^3.1.3",
     "gatsby-remark-normalize-paths": "^1.0.0",
@@ -28,10 +32,11 @@
     "gatsby-transformer-remark": "^2.6.1",
     "gatsby-transformer-sharp": "^2.2.1",
     "gatsby-transformer-yaml": "^2.2.4",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "tailwindcss": "^1.1.4"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
