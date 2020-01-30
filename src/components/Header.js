@@ -1,38 +1,17 @@
 import React from "react"
-import { Link } from "gatsby"
-import headerStyles from "../styles/components/header.module.scss"
+import useSiteMetadata from "../static_queries/useSiteMetadata"
 
 export default function Header(props) {
+  const siteMetadata = useSiteMetadata()
+
   return (
-    <header
-      className={`${headerStyles.header} ${props.page === 'info' &&
-        headerStyles.info_page}`}
-    >
-      <nav
-        className={headerStyles.header__nav}
-        role="navigation"
-        aria-label="main navigation"
-      >
-        <Link to="/">
-          <h1>{props.title}</h1>
-        </Link>
-        <div>
-          <h1>
-            <Link
-              to={
-                props.page === 'info'
-                  ? "/"
-                  : "/info"
-              }
-              activeClassName={headerStyles.navItemActive}
-            >
-              {props.page === 'info'
-                ? "close"
-                : "info"}
-            </Link>
-          </h1>
-        </div>
-      </nav>
-    </header>
+    <div className="header-container">
+      <h1 className="header-title text-6xl logo-font text-center p-4 text-white">
+        {siteMetadata.title}
+      </h1>
+      <p className="header-title text-m text-center text-white">
+        {siteMetadata.description}
+      </p>
+    </div>
   )
 }

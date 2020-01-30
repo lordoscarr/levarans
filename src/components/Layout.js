@@ -1,27 +1,27 @@
 import React from "react"
-import Header from "./Header"
 import Helmet from "react-helmet"
 import useSiteMetadata from "../static_queries/useSiteMetadata"
-import layoutStyles from "../styles/components/layout.module.scss"
+import Header from "./Header";
 
 export default function Layout(props) {
-  const { title, description } = useSiteMetadata()
+  const siteMetadata = useSiteMetadata()
+
   return (
-    <section
-      className={`${layoutStyles.layout} ${
-        props.page === "info" && 
-        layoutStyles.info_page}`}
-      style={{
-        backgroundColor: props.bgColor,
-      }}
-    >
+    <>
       <Helmet>
         <html lang="en" />
-        <title>{title}</title>
-        <meta name="description" content={description} />
+        <title>{siteMetadata.title}</title>
+        <meta name="description" content={siteMetadata.description} />
       </Helmet>
-      <Header page={props.page} title={title} />
-      <div className={layoutStyles.content}>{props.children}</div>
-    </section>
+      <header className="navbar"></header>
+      <main className="flex items-center flex-col">
+        <div className="container w-11/12 md:w-2/3 lg:w-5/12 my-16">
+          <Header />
+          <div className="form-container bg-white rounded-lg p-6 my-16 shadow-xl">
+            <div>{props.children}</div>
+          </div>
+        </div>
+      </main>
+    </>
   )
 }

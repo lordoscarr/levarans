@@ -1,5 +1,6 @@
 const config = require("./config.json")
 const infoData = require("./content/data/info.json")
+const menuData = require("./content/menu/menu.json")
 
 module.exports = {
   //this makes the site config available to forestry cms
@@ -11,6 +12,7 @@ module.exports = {
     contact: config.contact,
     primaryColor: config.primary_color,
     infoData: infoData,
+    menuData: menuData,
   },
   plugins: [
     "gatsby-plugin-sass",

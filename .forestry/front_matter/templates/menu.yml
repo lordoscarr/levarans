@@ -46,27 +46,19 @@ fields:
     export_format: YYYY-MM-DD
   default: now
 - name: delivery_start_time
-  type: datetime
+  type: text
   description: ''
   config:
     required: true
-    date_format: 
-    time_format: h:mm
-    display_utc: true
-    export_format: h:mm
-  label: Starttid för leverans
-  default: now
+  label: Tid för sista order
+  default: '15'
 - name: delivery_end_time
-  type: datetime
-  label: Sluttid för leverans
+  type: text
   description: ''
   config:
     required: true
-    date_format: 
-    time_format: h:mm
-    display_utc: true
-    export_format: h:mm
-  default: now
+  label: Tid för sista order
+  default: '18'
 - name: last_order_date
   type: datetime
   description: ''
@@ -75,9 +67,16 @@ fields:
     date_format: YYYY-MM-DD
     time_format: hh:mm
     display_utc: true
-    export_format: YYYY-MM-DD hh:mm
-  label: Tid för sista order
+    export_format: YYYY-MM-DD
+  label: Datum för sista order
   default: now
+- name: last_order_time
+  type: text
+  description: ''
+  config:
+    required: true
+  label: Tid för sista order
+  default: '12'
 - name: menu_information
   type: textarea
   default: ''
