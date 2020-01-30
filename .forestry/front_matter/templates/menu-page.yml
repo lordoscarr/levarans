@@ -68,12 +68,12 @@ fields:
     - type: textarea
       name: food_description
       label: Food description
-        config:
+      config:
         required: true
     - type: number
       name: food_price
       label: Food price
-        config:
+      config:
         default: 40
         required: true
     config:
