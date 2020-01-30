@@ -1,4 +1,118 @@
 ---
 label: Menu
 hide_body: false
-fields: []
+fields:
+- name: week_number
+  type: number
+  label: Veckonummer
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+    required: true
+- name: delivery_price
+  type: number
+  label: Leveranspris
+  description: Pris för leverans
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+    required: true
+- name: delivery_info
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Leveransinfo
+  description: Information om leveransen
+- name: delivery_date
+  type: datetime
+  label: Leveransdag
+  description: ''
+  config:
+    required: true
+    date_format: YYYY-MM-DD
+    time_format: 
+    display_utc: false
+    export_format: YYYY-MM-DD
+  default: now
+- name: delivery_start_time
+  type: datetime
+  description: ''
+  config:
+    required: true
+    date_format: 
+    time_format: hh:mm
+    display_utc: true
+    export_format: hh:mm
+  label: Starttid för leverans
+  default: now
+- name: delivery_end_time
+  type: datetime
+  label: Sluttid för leverans
+  description: ''
+  config:
+    required: true
+    date_format: 
+    time_format: hh:mm
+    display_utc: true
+    export_format: hh:mm
+  default: now
+- name: last_order_date
+  type: datetime
+  description: ''
+  config:
+    required: true
+    date_format: YYYY-MM-DD
+    time_format: hh:mm
+    display_utc: true
+    export_format: YYYY-MM-DD hh:mm
+  label: Tid för sista order
+  default: now
+- name: menu_information
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Information om menyn
+- name: menu
+  type: field_group_list
+  fields:
+  - name: food
+    type: text
+    config:
+      required: true
+    label: Maträtt
+  - name: description
+    type: text
+    config:
+      required: false
+    label: Beskrivning
+  - name: price
+    type: number
+    label: Pris
+    description: Pris för maträtten
+    default: 0
+    required: true
+    config:
+      min: 
+      max: 
+      step: 
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Meny
+  description: Veckans meny
