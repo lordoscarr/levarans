@@ -50,14 +50,14 @@ fields:
   description: ''
   config:
     required: true
-  label: Tid för sista order
+  label: Starttid för leverans
   default: '15'
 - name: delivery_end_time
   type: text
   description: ''
   config:
     required: true
-  label: Tid för sista order
+  label: Sluttid för leverans
   default: '18'
 - name: last_order_date
   type: datetime
