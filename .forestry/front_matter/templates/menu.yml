@@ -51,9 +51,9 @@ fields:
   config:
     required: true
     date_format: 
-    time_format: hh:mm
+    time_format: h:mm
     display_utc: true
-    export_format: hh:mm
+    export_format: h:mm
   label: Starttid för leverans
   default: now
 - name: delivery_end_time
@@ -63,9 +63,9 @@ fields:
   config:
     required: true
     date_format: 
-    time_format: hh:mm
+    time_format: h:mm
     display_utc: true
-    export_format: hh:mm
+    export_format: h:mm
   default: now
 - name: last_order_date
   type: datetime
