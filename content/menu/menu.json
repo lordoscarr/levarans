@@ -9,6 +9,11 @@
   "menu_information": "",
   "menu": [
     {
+      "food": "Stekt strömming med skirat smör, lingon och potatismos",
+      "description": "",
+      "price": 40
+    },
+    {
       "description": "",
       "price": 40,
       "food": "Isterband med stuvad potatis, senap och betor"
