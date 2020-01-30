@@ -9,6 +9,11 @@
   "menu_information": "",
   "menu": [
     {
+      "food": "Bakad blomkål med rostad potatis, parmesan, kryddsmör och rödvinssås",
+      "description": "",
+      "price": 40
+    },
+    {
       "food": "Stekt strömming med skirat smör, lingon och potatismos",
       "description": "",
       "price": 40
