@@ -116,5 +116,3 @@ fields:
     labelField: 
   label: Meny
   description: Veckans meny
-pages:
-- content/menu/menu.json
