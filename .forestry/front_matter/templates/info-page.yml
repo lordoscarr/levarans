@@ -1,6 +1,7 @@
 ---
-label: Info Page
-hide_body: true
+label: Om oss
+hide_body: false
+display_field: about
 fields:
 - type: field_group
   name: contact
