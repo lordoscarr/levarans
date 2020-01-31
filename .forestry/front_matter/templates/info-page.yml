@@ -2,14 +2,6 @@
 label: Info Page
 hide_body: true
 fields:
-- name: about
-  type: blocks
-  label: Om oss
-  template_types:
-  - blog-post
-  config:
-    min: 
-    max: 
 - type: field_group
   name: contact
   label: Kontaktinformation
@@ -24,5 +16,14 @@ fields:
     config:
       required: false
     label: Telefonnummer
+- name: about
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Om oss
 pages:
 - content/data/info.json
