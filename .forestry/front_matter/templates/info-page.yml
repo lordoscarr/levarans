@@ -3,6 +3,15 @@ label: Om oss
 hide_body: false
 display_field: about
 fields:
+- name: about
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Om oss
 - type: field_group
   name: contact
   label: Kontaktinformation
@@ -17,14 +26,5 @@ fields:
     config:
       required: false
     label: Telefonnummer
-- name: about
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: true
-    schema:
-      format: markdown
-  label: Om oss
 pages:
 - content/data/info.json
