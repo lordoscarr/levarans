@@ -11,12 +11,9 @@ export default function useSiteMetadata() {
           infoData {
             contact {
               email
-              github_handle
-              twitter_handle
+              phone
             }
-            cta
-            description
-            background_color
+            about
           }
           menuData {
             week_number
