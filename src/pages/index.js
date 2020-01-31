@@ -21,7 +21,7 @@ export default function IndexPage() {
   emailjs.init("user_0bkLmMrkWZfCnMae4ky2z")
 
   return (
-    <Layout>
+    <Layout page="index">
       {submitStatus === NOT_SUBMITTED && (
         <form>
           <p className="text-2xl color-b font-bold text-center">

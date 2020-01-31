@@ -17,6 +17,18 @@ body {
     font-family: "Laughing and Smiling";
 }
 
+.burger, .burger-squeeze {
+    font-size: 10px;
+}
+
+.burger .burger-lines,
+.burger .burger-lines:after,
+.burger .burger-lines:before { background-color: #4d6b96; }
+
+.bg-color-a > .burger .burger-lines,
+.bg-color-a > .burger .burger-lines:after,
+.bg-color-a > .burger .burger-lines:before { background-color: white; }
+
 .color-a {
     color: #66aae6;
 }

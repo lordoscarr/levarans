@@ -10,7 +10,7 @@ export default function Info() {
   console.log(menuData)
 
   return (
-    <Layout>
+    <Layout page="menu">
       <p className="logo-font text-4xl text-center color-c">Meny</p>
       <p className="my-4 text-center text-s color-b">
         <ReactMarkdown source={menuData.menu_information} />
@@ -21,7 +21,7 @@ export default function Info() {
       <ul>
         {menuData.menu.map(menuItem => {
           return (
-            <li className="flex">
+            <li key={menuItem.food} className="flex">
               <div className="w-3/4 color-c">
                 <p className="font-bold">{menuItem.food}</p>{" "}
                 <p className="text-xs color-b">{menuItem.description}</p>
@@ -39,11 +39,16 @@ export default function Info() {
       <div className=" md:flex lg:flex text-center">
         <div className="md:w-1/2 lg:w-1/2 py-2">
           <p className="font-bold text-xs color-c">Beställ senast</p>
-          <p className="color-b">{menuData.last_order_date} kl. {menuData.last_order_time}</p>
+          <p className="color-b">
+            {menuData.last_order_date} kl. {menuData.last_order_time}
+          </p>
         </div>
         <div className="md:w-1/2 lg:w-1/2 py-2">
           <p className="font-bold text-xs color-c">Leverans</p>
-          <p className="color-b">{menuData.delivery_date} kl. {menuData.delivery_start_time}-{menuData.delivery_end_time}</p>
+          <p className="color-b">
+            {menuData.delivery_date} kl. {menuData.delivery_start_time}-
+            {menuData.delivery_end_time}
+          </p>
         </div>
       </div>
       <p className="my-4 text-center text-s color-b">
