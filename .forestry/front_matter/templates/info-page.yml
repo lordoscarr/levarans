@@ -3,15 +3,13 @@ label: Info Page
 hide_body: true
 fields:
 - name: about
-  type: textarea
-  default: ''
-  config:
-    required: true
-    wysiwyg: true
-    schema:
-      format: markdown
+  type: blocks
   label: Om oss
-  description: Beskrivning om vad vi gör
+  template_types:
+  - blog-post
+  config:
+    min: 
+    max: 
 - type: field_group
   name: contact
   label: Kontaktinformation
