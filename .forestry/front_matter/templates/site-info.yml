@@ -13,7 +13,7 @@ fields:
   label: repository_url (rör ej)
 - type: text
   name: form_email
-  label: e-mail för formulär 
+  label: e-mail för formulär
 - name: alert_message
   type: textarea
   default: ''
