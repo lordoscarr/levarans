@@ -1,5 +1,10 @@
 @tailwind base;
 
+ol {
+    @apply list-decimal;
+    @apply list-inside;
+}
+
 @tailwind components;
 
 @tailwind utilities;
@@ -7,6 +12,10 @@
 @font-face {
   font-family: "Laughing and Smiling";
   src: url("../../static/fonts/LaughingAndSmiling/laughing_and_smiling-webfont.woff") format("woff");
+}
+
+html {
+    background-color: #66aae6;
 }
 
 body {

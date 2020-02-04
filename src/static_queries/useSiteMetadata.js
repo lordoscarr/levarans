@@ -8,7 +8,9 @@ export default function useSiteMetadata() {
           title
           description
           repoUrl
+          alertMessage
           infoData {
+            title
             contact {
               email
               phone

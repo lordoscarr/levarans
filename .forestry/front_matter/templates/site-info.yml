@@ -4,12 +4,24 @@ hide_body: true
 fields:
 - type: text
   name: title
-  label: title
+  label: Titel
 - type: text
   name: description
-  label: description
+  label: Undertitel
 - type: text
   name: repository_url
-  label: repository_url
+  label: repository_url (rör ej)
+- type: text
+  name: form_email
+  label: e-mail för formulär 
+- name: alert_message
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Notismeddelande (ovanför formulär)
 pages:
 - config.json

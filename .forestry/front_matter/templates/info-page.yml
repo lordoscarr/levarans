@@ -3,6 +3,9 @@ label: Om oss
 hide_body: false
 display_field: about
 fields:
+- name: title
+  type: text
+  label: sidnamn
 - name: about
   type: textarea
   default: ''

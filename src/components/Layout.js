@@ -2,13 +2,17 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import Helmet from "react-helmet"
 import useSiteMetadata from "../static_queries/useSiteMetadata"
+import useBlogData from "../static_queries/useBlogData"
 import Header from "./Header"
 import "@animated-burgers/burger-squeeze/dist/styles.css"
 import Sidebar from "react-sidebar"
+import Navbar from "./Navbar"
+import Message from "./Message"
 import { MdRestaurantMenu } from "react-icons/md"
 
 export default function Layout(props) {
   const siteMetadata = useSiteMetadata()
+  const blogData = useBlogData()
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
@@ -18,7 +22,6 @@ export default function Layout(props) {
         <title>{siteMetadata.title}</title>
         <meta name="description" content={siteMetadata.description} />
       </Helmet>
-      <header className="navbar"></header>
       <Sidebar
         sidebar={
           <>
@@ -69,10 +72,11 @@ export default function Layout(props) {
           },
         }}
       >
-        <main className="flex items-center flex-col bg-color-a">
+        <Navbar page={props.page} />
+        <main className="flex items-center flex-col">
           <div
             className={
-              "absolute top-0 left-0 my-2 mx-2 md:mx-4 lg:mx-4 md:my-12 lg:my-12 z-50 cursor-pointer"
+              "lg:invisible absolute top-0 left-0 my-2 mx-2 md:mx-4 lg:mx-4 md:my-12 lg:my-12 z-50 cursor-pointer"
             }
             onClick={() => setSidebarOpen(!sidebarOpen)}
           >
@@ -90,12 +94,20 @@ export default function Layout(props) {
               {/* <Burger isOpen={sidebarOpen} /> */}
             </div>
           </div>
-          <div className="container w-11/12 md:w-2/3 lg:w-5/12 my-16">
+          <div className="container w-11/12 md:w-2/3 lg:w-1/2 my-16">
             <Header />
+            {props.page === "index" && <Message />}
             <div className="form-container bg-white rounded-lg p-6 my-16 shadow-xl">
               <div>{props.children}</div>
             </div>
           </div>
+          <div className="m-2">
+            {blogData.map(item => {
+              console.log(item)
+              return <Link className="m-2 text-white hover:underline">{item.node.frontmatter.title}</Link>
+            })}
+          </div>
+          <p className="p-2 mt-4 color-b w-full text-center bg-white">Copyright Levarans 2020</p>
         </main>
       </Sidebar>
     </>
