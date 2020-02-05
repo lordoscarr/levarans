@@ -1,6 +1,7 @@
 {
   "title": "Levarans",
   "description": "Himmelskt gott - hem till dig.",
-  "alert_message": "Den här sidan är ny!",
-  "repository_url": "https://github.com/lordoscarr/levarera"
+  "alert_message": "# Hej alla glada!\n\nTack för att du hittat hit! Vi lovar att du inte kommer bli ledsen",
+  "repository_url": "https://github.com/lordoscarr/levarans",
+  "form_email": ""
 }
