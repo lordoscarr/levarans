@@ -15,6 +15,8 @@ export default function Layout(props) {
   const blogData = useBlogData()
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
+  console.log(props)
+  
   return (
     <>
       <Helmet>
