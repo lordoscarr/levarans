@@ -1,0 +1,24 @@
+.header-subtitle {
+  color: white;
+}
+
+.form-container {
+  transition: max-height 0.15s 0.3s ease-in-out;
+  max-height: 10000px;
+}
+
+button:disabled {
+  background-color: gray;
+  cursor: default;
+}
+
+.markdown {
+  color: white;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: white;
+  }
+}
