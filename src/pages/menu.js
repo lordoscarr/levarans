@@ -3,8 +3,9 @@ import useSiteMetaData from "../static_queries/useSiteMetadata"
 import Layout from "../components/Layout"
 import { FiTruck } from "react-icons/fi"
 import ReactMarkdown from "react-markdown"
+import { MdMailOutline, MdPhone } from "react-icons/md"
 
-export default function Info() {
+export default function MenuPage() {
   const { menuData } = useSiteMetaData()
 
   console.log(menuData)
@@ -34,6 +35,10 @@ export default function Info() {
         })}
       </ul>
 
+      <p className="my-4 text-center text-s color-b">
+        <ReactMarkdown source={menuData.delivery_info} />
+      </p>
+
       <FiTruck className="my-8 mx-auto" size="3rem" color={"#4a7367"} />
 
       <div className=" md:flex lg:flex text-center">
@@ -51,9 +56,16 @@ export default function Info() {
           </p>
         </div>
       </div>
-      <p className="my-4 text-center text-s color-b">
-        <ReactMarkdown source={menuData.delivery_info} />
-      </p>
+      <div className="flex">
+        <div className="w-1/2 text-center my-2">
+          <MdMailOutline className="m-auto text-3xl color-c my-2" />
+          <a href={"mailto:" + menuData.contact.email} className="color-b">{menuData.contact.email}</a>
+        </div>
+        <div className="w-1/2 text-center">
+          <MdPhone className="m-auto text-3xl color-c my-2" />
+          <a href={"tel:" + menuData.contact.phone} className="color-b">{menuData.contact.phone}</a>
+        </div>
+      </div>
     </Layout>
   )
 }

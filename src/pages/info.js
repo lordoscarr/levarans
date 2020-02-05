@@ -1,11 +1,12 @@
 import React from "react"
 import Layout from "../components/Layout"
 import useSiteMetaData from "../static_queries/useSiteMetadata"
-import "./info.scss"
+import "../styles/pages/info.module.scss"
+
 import Markdown from "../components/Markdown"
 import { MdMailOutline, MdPhone } from "react-icons/md"
 
-export default function Info() {
+export default function InfoPage() {
   const { infoData } = useSiteMetaData()
   return (
     <Layout page="info">

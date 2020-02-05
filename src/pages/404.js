@@ -1,15 +1,13 @@
 import React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/Layout"
 import useSiteMetadata from "../static_queries/useSiteMetadata"
 
 export default function NotFound() {
-    const siteMetadata = useSiteMetadata()
+  const siteMetadata = useSiteMetadata()
 
   return (
     <>
-      <header className="navbar"></header>
-      <main className="flex items-center flex-col">
+      <Layout>
         <div className="container w-4/5 md:w-1/2 lg:w-1/3 my-16">
           <div className="header-container">
             <h1 className="header-title text-6xl logo-font text-center p-4 text-white">
@@ -23,7 +21,7 @@ export default function NotFound() {
             <p className="text-center">Oops! Kunde inte hitta sidan.</p>
           </div>
         </div>
-      </main>
+      </Layout>
     </>
   )
 }

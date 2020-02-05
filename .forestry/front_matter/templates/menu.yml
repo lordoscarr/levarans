@@ -34,6 +34,20 @@ fields:
       format: markdown
   label: Leveransinfo
   description: Information om leveransen
+- type: field_group
+  name: contact
+  label: Kontaktinformation
+  fields:
+  - type: text
+    name: email
+    label: E-post
+    config:
+      required: true
+  - name: phone
+    type: text
+    config:
+      required: false
+    label: Telefonnummer
 - name: delivery_date
   type: datetime
   label: Leveransdag
@@ -65,8 +79,6 @@ fields:
   config:
     required: true
     date_format: YYYY-MM-DD
-    time_format: hh:mm
-    display_utc: true
     export_format: YYYY-MM-DD
   label: Datum för sista order
   default: now

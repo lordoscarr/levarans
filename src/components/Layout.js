@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import Helmet from "react-helmet"
+import "../styles/tailwind.css"
 import useSiteMetadata from "../static_queries/useSiteMetadata"
 import useBlogData from "../static_queries/useBlogData"
 import Header from "./Header"
@@ -14,8 +15,6 @@ export default function Layout(props) {
   const siteMetadata = useSiteMetadata()
   const blogData = useBlogData()
   const [sidebarOpen, setSidebarOpen] = useState(false)
-
-  console.log(props)
 
   return (
     <>
@@ -98,14 +97,14 @@ export default function Layout(props) {
           </div>
           <div className="container w-11/12 md:w-2/3 lg:w-1/2 my-16">
             <Header />
-            {props.page === "index" && <Message />}
+            {props.page === "index" && <div className="bg-white rounded-lg p-6 my-16 shadow-xl"><Message /></div>}
             <div>
               <div className="form-container bg-white rounded-lg p-6 my-16 shadow-xl">
                 <div>{props.children}</div>
               </div>
             </div>
           </div>
-          <div className="m-2">
+          <div className="m-2 text-center">
             {blogData.map(item => {
               console.log(item)
               return (

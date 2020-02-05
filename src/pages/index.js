@@ -1,9 +1,7 @@
 import React, { useState } from "react"
 import Layout from "../components/Layout"
-import BlogList from "../components/BlogList"
 import Spinner from "../components/Spinner"
-import "./tailwind.css"
-import "./index.scss"
+import "../styles/pages/index.module.scss"
 import emailjs from "emailjs-com"
 
 export default function IndexPage() {
@@ -15,8 +13,8 @@ export default function IndexPage() {
   const [contactMethod, setContactMethod] = useState("phone")
   const [contactName, setContactName] = useState("")
   const [contactAddress, setContactAddress] = useState("")
+  const [contactComment, setContactComment] = useState("")
   const [submitStatus, setSubmitStatus] = useState(0)
-
 
   emailjs.init("user_0bkLmMrkWZfCnMae4ky2z")
 
@@ -113,6 +111,25 @@ export default function IndexPage() {
               />
             </div>
           )}
+          <div className="my-4">
+            <label className="block color-b text-center" htmlFor="name">
+              Övrigt
+            </label>
+            <textarea
+              placeholder="Allergier, frågor, annan information."
+              id="comment"
+              type="text"
+              required="yes"
+              onChange={e => {
+                setContactComment(e.target.value)
+                console.log(e.target.value)
+              }}
+              className="w-full h-24 border-gray-300 border-solid border-2 rounded text-center"
+              required="no"
+              defaultValue={""}
+            />
+          </div>
+
           <button
             type="button"
             className="w-full bg-color-b text-white h-12 mt-8 border-gray-300 border-solid border-2 rounded text-center"
@@ -124,12 +141,14 @@ export default function IndexPage() {
             }
             onClick={() => {
               setSubmitStatus(SUBMITTING)
+
               emailjs
                 .send("default_service", "template_I27ARLU2", {
                   contactName: contactName,
                   contactMethod:
                     contactMethod === "phone" ? "Telefonnummer: " : "E-mail:",
                   contactAddress: contactAddress,
+                  contactComment: contactComment,
                 })
                 .then(
                   function(response) {
@@ -149,7 +168,9 @@ export default function IndexPage() {
       )}
       {submitStatus === SUBMITTING && (
         <div className="text-center">
-          <Spinner type="timer" />
+          <div>
+            <Spinner type="timer" />
+          </div>
           <p>Skickar in intresseanmälan.</p>
         </div>
       )}

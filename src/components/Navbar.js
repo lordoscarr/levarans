@@ -7,8 +7,8 @@ export default function Navbar(props) {
   console.log(page)
   return (
     <div className="fixed invisible lg:visible bg-white w-full h-12 flex shadow-lg">
-      <span className="mx-64 my-auto w-full flex justify-between items-end">
-        <span className="logo-font color-c text-xl mr-8">
+      <span className="mx-48 my-auto w-full flex justify-between items-end">
+        <span className="logo-font color-b text-xl mr-8">
           <Link to="/">Levarans</Link>
         </span>
         <span className="">

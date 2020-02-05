@@ -27,6 +27,10 @@ export default function useSiteMetadata() {
             delivery_end_time
             delivery_start_time
             menu_information
+            contact {
+              email
+              phone
+            }
             menu {
               food
               description
