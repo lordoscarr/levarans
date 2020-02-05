@@ -15,7 +15,6 @@ module.exports = {
     infoData: infoData,
     menuData: menuData,
   },
-  pathPrefix: 'levarans',
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-transformer-remark",
