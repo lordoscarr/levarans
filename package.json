@@ -1,14 +1,15 @@
 {
-  "name": "foresry-starter-blog-gatsby",
+  "name": "Levarans",
   "private": true,
-  "description": "A simple starter blog to get up and developing quickly with Forestry & Gatsby",
+  "description": "Himmelskt gott - hem till dig.",
   "license": "MIT",
   "version": "0.1.0",
-  "author": "kendall strautman",
+  "author": "Oscar Andersson",
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop -o",
     "develop": "yarn dev",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "yarn dev",
     "serve": "gatsby serve",
@@ -46,6 +47,7 @@
     "tailwindcss": "^1.1.4"
   },
   "devDependencies": {
+    "gh-pages": "^2.2.0",
     "prettier": "^1.18.2"
   },
   "keywords": [
@@ -54,6 +56,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/forestryio/brevifolia-gatsby-forestry"
+    "url": "https://github.com/lordoscarr"
   }
 }

@@ -104,7 +104,7 @@ export default function Layout(props) {
           <div className="m-2">
             {blogData.map(item => {
               console.log(item)
-              return <Link className="m-2 text-white hover:underline">{item.node.frontmatter.title}</Link>
+              return <Link to={'/pages/' + item.node.fields.slug} className="m-2 text-white hover:underline">{item.node.frontmatter.title}</Link>
             })}
           </div>
           <p className="p-2 mt-4 color-b w-full text-center bg-white">Copyright Levarans 2020</p>

@@ -72,7 +72,7 @@ export default function IndexPage() {
                 Välj ett alternativ
               </option>
               <option value="phone">Telefon</option>
-              <option value="mail">E-post</option>
+              {/*<option value="mail">E-post</option>*/}
             </select>
           </div>
           {contactMethod.length > 0 && (
