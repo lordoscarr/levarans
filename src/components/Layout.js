@@ -16,7 +16,7 @@ export default function Layout(props) {
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   console.log(props)
-  
+
   return (
     <>
       <Helmet>
@@ -99,17 +99,28 @@ export default function Layout(props) {
           <div className="container w-11/12 md:w-2/3 lg:w-1/2 my-16">
             <Header />
             {props.page === "index" && <Message />}
-            <div className="form-container bg-white rounded-lg p-6 my-16 shadow-xl">
-              <div>{props.children}</div>
+            <div>
+              <div className="form-container bg-white rounded-lg p-6 my-16 shadow-xl">
+                <div>{props.children}</div>
+              </div>
             </div>
           </div>
           <div className="m-2">
             {blogData.map(item => {
               console.log(item)
-              return <Link to={'/pages/' + item.node.fields.slug} className="m-2 text-white hover:underline">{item.node.frontmatter.title}</Link>
+              return (
+                <Link
+                  to={"/pages/" + item.node.fields.slug}
+                  className="m-2 text-white hover:underline"
+                >
+                  {item.node.frontmatter.title}
+                </Link>
+              )
             })}
           </div>
-          <p className="p-2 mt-4 color-b w-full text-center bg-white">Copyright Levarans 2020</p>
+          <p className="p-2 mt-4 color-b w-full text-center bg-white">
+            Copyright Levarans 2020
+          </p>
         </main>
       </Sidebar>
     </>

@@ -12,7 +12,7 @@ export default function IndexPage() {
   const SUBMITTING = 2
   const SUBMIT_FAILED = 3
 
-  const [contactMethod, setContactMethod] = useState("")
+  const [contactMethod, setContactMethod] = useState("phone")
   const [contactName, setContactName] = useState("")
   const [contactAddress, setContactAddress] = useState("")
   const [submitStatus, setSubmitStatus] = useState(0)
@@ -52,7 +52,7 @@ export default function IndexPage() {
               }}
             />
           </div>
-          <div className="my-4">
+          {/*<div className="my-4">
             <label
               className="block color-b text-center"
               htmlFor="contact-option"
@@ -72,9 +72,9 @@ export default function IndexPage() {
                 Välj ett alternativ
               </option>
               <option value="phone">Telefon</option>
-              {/*<option value="mail">E-post</option>*/}
+              *<option value="mail">E-post</option>}
             </select>
-          </div>
+          </div>}*/}
           {contactMethod.length > 0 && (
             <div className="my-4">
               <label
