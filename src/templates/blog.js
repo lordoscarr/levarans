@@ -25,7 +25,7 @@ export default function Blog(props) {
   }
 
   return (
-    <Layout>
+    <Layout page="blog">
       <h1 className="text-3xl logo-font my-8 text-center color-c">{data.frontmatter.title}</h1>
       <Markdown escapeHtml={false} source={data.html} />
     </Layout>
