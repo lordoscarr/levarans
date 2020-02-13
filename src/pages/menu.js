@@ -57,7 +57,7 @@ export default function MenuPage() {
         </div>
       </div>
       <div className="flex">
-        <div className="w-1/2 text-center my-2">
+        <div className="w-1/2 text-center">
           <MdMailOutline className="m-auto text-3xl color-c my-2" />
           <a href={"mailto:" + menuData.contact.email} className="color-b">{menuData.contact.email}</a>
         </div>
