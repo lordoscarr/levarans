@@ -9,6 +9,9 @@ fields:
   name: description
   label: Undertitel
 - type: text
+  name: google_analytics_id
+  label: Google Analytics ID (UA-XXXXXXXXX-X)
+- type: text
   name: repository_url
   label: repository_url (rör ej)
 - type: text
