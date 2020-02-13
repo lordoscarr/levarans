@@ -3,5 +3,5 @@ import ReactMarkdown from "react-markdown"
 import "./Markdown.scss"
 
 export default function Markdown(props) {  
-    return (<ReactMarkdown className="markdown" {...props} />)
+    return (<ReactMarkdown className="markdown color-b" {...props} />)
 }

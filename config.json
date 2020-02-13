@@ -1,9 +1,10 @@
 {
   "title": "Levarans",
   "description": "Himmelskt gott - hem till dig.",
-  "alert_message": "# Hej alla glada!\n\nTack för att du hittat hit! Vi lovar att du inte kommer bli ledsen.",
-  "repository_url": "https://github.com/lordoscarr/levarans",
   "google_analytics_id": "UA-33194333-2",
   "instagram_username": "levarans.se",
-  "facebook_username": "Levarans-100157351551110"
+  "facebook_username": "Levarans-100157351551110",
+  "alert_message": "# Hej!\n\nVälkommen till oss på Levarans! Vi är ett nystartat företag från Helsingborg med visionen att göra det enklare för dig som pensionär att få god husmanskost hemlevererad från Helsingborgs bästa restauranger.\n\nVarje onsdag är vi ute och levererar fantastiska maträtter till våra kunder. \n\nVill du att vi hör av oss till dig för att berätta mer om hur vi kan hjälpa just dig (eller någon du känner)? Fyll i ditt namn och telefonnummer nedan så hör vi av oss inom 24 timmar. \n\nVänliga hälsningar,\n\nFilip & Julia på Levarans",
+  "repository_url": "https://github.com/lordoscarr/levarans",
+  "form_email": "info@levarans.se"
 }
