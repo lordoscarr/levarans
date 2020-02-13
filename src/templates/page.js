@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
+import { graphql } from "gatsby"
 import usePageData from "../static_queries/usePageData"
 import Markdown from "../components/Markdown"
 
@@ -14,3 +15,20 @@ export default function Page(props) {
     </Layout>
   )
 }
+
+//dynamic page query, must occur within each post context
+//$slug is made available by context from createPages call in gatsby-node.js
+export const getPostData = graphql`
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+        mainmenu
+      }
+      html
+    }
+  }
+`
