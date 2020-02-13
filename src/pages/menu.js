@@ -8,8 +8,6 @@ import { MdMailOutline, MdPhone } from "react-icons/md"
 export default function MenuPage() {
   const { menuData } = useSiteMetaData()
 
-  console.log(menuData)
-
   return (
     <Layout page="menu">
       <p className="logo-font text-4xl text-center color-c">Meny</p>

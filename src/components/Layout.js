@@ -183,9 +183,6 @@ export default function Layout(props) {
           </>
         }
         open={sidebarOpen}
-        onSetOpen={() => {
-          console.log("sidebar open")
-        }}
         styles={{
           sidebar: {
             background: "white",

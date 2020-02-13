@@ -37,7 +37,6 @@ export default function IndexPage() {
               required="yes"
               onChange={e => {
                 setContactName(e.target.value)
-                console.log(e.target.value)
               }}
               className="w-full h-12 border-gray-300 border-solid border-2 rounded text-center"
               required="yes"
@@ -60,7 +59,6 @@ export default function IndexPage() {
             <select
               onChange={e => {
                 setContactMethod(e.target.value)
-                console.log(e.target.value)
               }}
               className="w-full h-12 border-gray-300 border-solid border-2 rounded text-center"
               required="yes"
@@ -93,10 +91,8 @@ export default function IndexPage() {
                 required="yes"
                 onChange={e => {
                   setContactAddress(e.target.value)
-                  console.log(e.target.value)
                 }}
                 onInvalid={e => {
-                  console.log("invalid")
                   e.target.setCustomValidity("")
                   if (!e.target.validity.valid) {
                     const text =
@@ -122,7 +118,6 @@ export default function IndexPage() {
               required="yes"
               onChange={e => {
                 setContactComment(e.target.value)
-                console.log(e.target.value)
               }}
               className="w-full h-24 border-gray-300 border-solid border-2 rounded text-center"
               required="no"
@@ -153,11 +148,9 @@ export default function IndexPage() {
                 .then(
                   function(response) {
                     setSubmitStatus(SUBMITTED)
-                    console.log("SUCCESS!", response.status, response.text)
                   },
                   function(error) {
                     setSubmitStatus(SUBMIT_FAILED)
-                    console.log("FAILED...", error)
                   }
                 )
             }}

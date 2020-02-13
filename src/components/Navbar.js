@@ -6,7 +6,6 @@ export default function Navbar(props) {
   const { page } = props
   const pageData = usePageData()
 
-  console.log(page)
   return (
     <div className="fixed invisible lg:visible bg-white w-full h-12 flex shadow-lg">
       <span className="mx-48 my-auto w-full flex justify-between items-end">
