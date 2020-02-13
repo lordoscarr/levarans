@@ -14,7 +14,7 @@ export default function InfoPage() {
       <Markdown source={infoData.about} />
       <p className="text-xl text-center font-bold color-c my-4">Kontakta oss</p>
       <div className="flex">
-        <div className="w-1/2 text-center my-2">
+        <div className="w-1/2 text-center">
           <MdMailOutline className="m-auto text-3xl color-c my-2" />
           <a href={"mailto:" + infoData.contact.email} className="color-b">{infoData.contact.email}</a>
         </div>

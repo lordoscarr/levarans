@@ -9,6 +9,7 @@ export default function usePageData() {
             id
             frontmatter {
               title
+              mainmenu
             }
             excerpt(pruneLength: 200)
             fields {

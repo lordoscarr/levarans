@@ -168,7 +168,7 @@ export default function IndexPage() {
       )}
       {submitStatus === SUBMITTING && (
         <div className="text-center">
-          <div>
+          <div className="color-b my-4">
             <Spinner type="timer" />
           </div>
           <p>Skickar in intresseanmälan.</p>

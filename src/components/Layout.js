@@ -131,10 +131,55 @@ export default function Layout(props) {
               >
                 <Link to="/info">Om oss</Link>
               </li>
+              {pageData
+                .filter(e => e.node.frontmatter.mainmenu)
+                .map(item => {
+                  return (
+                    <li
+                      key={item.node.fields.slug}
+                      className={
+                        "text-2xl font-bold hover:underline cursor-pointer color-c " +
+                        (props.page === "/pages/" + item.node.fields.slug &&
+                          "underline")
+                      }
+                    >
+                      <Link
+                        to={"/pages/" + item.node.fields.slug}
+                      >
+                        {item.node.frontmatter.title}
+                      </Link>
+                    </li>
+                  )
+                })}
             </ul>
-            <p className="absolute logo-font text-2xl color-b bottom-0 my-8">
+            <div className="absolute bottom-0">
+                <ul>
+                {pageData
+                .filter(e => !e.node.frontmatter.mainmenu)
+                .map(item => {
+                  return (
+                    <li
+                      key={item.node.fields.slug}
+                      className={
+                        "text-xl font-bold hover:underline cursor-pointer color-a " +
+                        (props.page === "/pages/" + item.node.fields.slug &&
+                          "underline")
+                      }
+                    >
+                      <Link
+                        to={"/pages/" + item.node.fields.slug}
+                      >
+                        {item.node.frontmatter.title}
+                      </Link>
+                    </li>
+                  )
+                })}
+                </ul>
+                <p className="logo-font text-2xl color-b my-8">
               Levarans
             </p>
+            </div>
+            
           </>
         }
         open={sidebarOpen}
@@ -151,7 +196,7 @@ export default function Layout(props) {
         }}
       >
         <Navbar page={props.page} />
-        <main className="flex items-center flex-col">
+        <main className="flex items-center flex-col h-screen">
           <div
             className={
               "lg:invisible absolute top-0 left-0 my-2 mx-2 md:mx-4 lg:mx-4 md:my-12 lg:my-12 z-50 cursor-pointer"
@@ -165,7 +210,6 @@ export default function Layout(props) {
               }
             >
               <MdRestaurantMenu
-                lassName="my-8 mx-auto"
                 size="2rem"
                 color={sidebarOpen ? "white" : "#4d6b96"}
               />
@@ -185,7 +229,7 @@ export default function Layout(props) {
               </div>
             </div>
           </div>
-          <div className="flex text-white text-6xl">
+          <div className="flex text-white m-auto text-6xl flex-row justify-center">
             <div
               className="mx-4 cursor-pointer"
               onClick={() =>
@@ -207,18 +251,27 @@ export default function Layout(props) {
               <FaFacebookSquare />
             </div>
           </div>
-          <div className="m-2 text-center">
-            {pageData.map(item => {
-              console.log(item)
-              return (
-                <Link
-                  to={"/pages/" + item.node.fields.slug}
-                  className="m-2 text-white hover:underline"
-                >
-                  {item.node.frontmatter.title}
-                </Link>
-              )
-            })}
+          <div className="invisible md:visible lg:visible m-2 text-center">
+            {pageData
+              .filter(e => !e.node.frontmatter.mainmenu)
+              .map(item => {
+                return (
+                  <p
+                    className={
+                      "hover:underline cursor-pointer " +
+                      (props.page === "/pages/" + item.node.fields.slug &&
+                        "underline")
+                    }
+                  >
+                    <Link
+                      to={"/pages/" + item.node.fields.slug}
+                      className="m-2 text-white hover:underline"
+                    >
+                      {item.node.frontmatter.title}
+                    </Link>
+                  </p>
+                )
+              })}
           </div>
           <p className="p-2 mt-4 color-b w-full text-center bg-white">
             Copyright Levarans 2020
