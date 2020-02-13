@@ -9,6 +9,8 @@ export default function useSiteMetadata() {
           description
           repoUrl
           alertMessage
+          instagramUsername
+          facebookUsername
           infoData {
             title
             contact {

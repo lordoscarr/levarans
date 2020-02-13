@@ -3,17 +3,18 @@ import { Link } from "gatsby"
 import Helmet from "react-helmet"
 import "../styles/tailwind.css"
 import useSiteMetadata from "../static_queries/useSiteMetadata"
-import useBlogData from "../static_queries/useBlogData"
+import usePageData from "../static_queries/usePageData"
 import Header from "./Header"
 import "@animated-burgers/burger-squeeze/dist/styles.css"
 import Sidebar from "react-sidebar"
 import Navbar from "./Navbar"
 import Message from "./Message"
+import {FaFacebookSquare,FaInstagram} from "react-icons/fa"
 import { MdRestaurantMenu } from "react-icons/md"
 
 export default function Layout(props) {
   const siteMetadata = useSiteMetadata()
-  const blogData = useBlogData()
+  const pageData = usePageData()
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
@@ -104,8 +105,12 @@ export default function Layout(props) {
               </div>
             </div>
           </div>
+          <div className="flex text-white text-6xl">
+              <div className="mx-4 cursor-pointer" onClick={() => window.open("https://instagram.com/" + siteMetadata.instagramUsername)}><FaInstagram /></div>
+              <div className="mx-4 cursor-pointer" onClick={() => window.open("https://facebook.com/" + siteMetadata.facebookUsername)}><FaFacebookSquare /></div>
+          </div>
           <div className="m-2 text-center">
-            {blogData.map(item => {
+            {pageData.map(item => {
               console.log(item)
               return (
                 <Link

@@ -1,28 +1,13 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { graphql, Link } from "gatsby"
-import useBlogData from "../static_queries/useBlogData"
-import blogTemplateStyles from "../styles/templates/blog.module.scss"
+import usePageData from "../static_queries/usePageData"
 //this component handles the blur img & fade-ins
 import Img from "gatsby-image"
 import Markdown from "../components/Markdown"
 
 export default function Blog(props) {
   const data = props.data.markdownRemark
-  const allBlogData = useBlogData()
-  const nextSlug = getNextSlug(data.fields.slug)
-
-  function getNextSlug(slug) {
-    const allSlugs = allBlogData.map(blog => {
-      return blog.node.fields.slug
-    })
-    const nextSlug = allSlugs[allSlugs.indexOf(slug) + 1]
-    if (nextSlug !== undefined && nextSlug !== "") {
-      return nextSlug
-    } else {
-      return allSlugs[0]
-    }
-  }
 
   return (
     <Layout page="page">

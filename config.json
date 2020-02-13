@@ -1,7 +1,9 @@
 {
   "title": "Levarans",
   "description": "Himmelskt gott - hem till dig.",
-  "alert_message": "# Hej alla glada!\n\nTack för att du hittat hit! Vi lovar att du inte kommer bli ledsen",
+  "alert_message": "# Hej alla glada!\n\nTack för att du hittat hit! Vi lovar att du inte kommer bli ledsen.",
   "repository_url": "https://github.com/lordoscarr/levarans",
-  "form_email": ""
+  "google_analytics_id": "UA-33194333-2",
+  "instagram_username": "levarans.se",
+  "facebook_username": "Levarans-100157351551110"
 }

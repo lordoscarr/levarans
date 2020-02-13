@@ -8,6 +8,8 @@ module.exports = {
     title: config.title,
     description: config.description,
     repoUrl: config.repository_url,
+    instagramUsername: config.instagram_username,
+    facebookUsername: config.facebook_username,
     alertMessage: config.alert_message,
     about: config.about,
     contact: config.contact,
@@ -35,6 +37,13 @@ module.exports = {
       resolve: `gatsby-plugin-postcss`,
       options: {
         postCssPlugins: [require("tailwindcss"), require("autoprefixer")],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: config.google_analytics_id,
       },
     },
     {
