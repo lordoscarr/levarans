@@ -9,7 +9,7 @@ import "@animated-burgers/burger-squeeze/dist/styles.css"
 import Sidebar from "react-sidebar"
 import Navbar from "./Navbar"
 import Message from "./Message"
-import {FaFacebookSquare,FaInstagram} from "react-icons/fa"
+import { FaFacebookSquare, FaInstagram } from "react-icons/fa"
 import { MdRestaurantMenu } from "react-icons/md"
 
 export default function Layout(props) {
@@ -23,6 +23,82 @@ export default function Layout(props) {
         <html lang="en" />
         <title>{siteMetadata.title}</title>
         <meta name="description" content={siteMetadata.description} />
+        <link
+          rel="apple-touch-icon"
+          sizes="57x57"
+          href="/favicon/apple-icon-57x57.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="60x60"
+          href="/favicon/apple-icon-60x60.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="/favicon/apple-icon-72x72.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="76x76"
+          href="/favicon/apple-icon-76x76.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="114x114"
+          href="/favicon/apple-icon-114x114.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="120x120"
+          href="/favicon/apple-icon-120x120.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="/favicon/apple-icon-144x144.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="/favicon/apple-icon-152x152.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-icon-180x180.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="192x192"
+          href="/favicon/android-icon-192x192.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="96x96"
+          href="/favicon/favicon-96x96.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/favicon/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta
+          name="msapplication-TileImage"
+          content="/favicon/ms-icon-144x144.png"
+        />
+        <meta name="theme-color" content="#ffffff" />
       </Helmet>
       <Sidebar
         sidebar={
@@ -98,7 +174,11 @@ export default function Layout(props) {
           </div>
           <div className="container w-11/12 md:w-2/3 lg:w-1/2 my-16">
             <Header />
-            {props.page === "index" && <div className="bg-white rounded-lg p-6 my-16 shadow-xl"><Message /></div>}
+            {props.page === "index" && (
+              <div className="bg-white rounded-lg p-6 my-16 shadow-xl">
+                <Message />
+              </div>
+            )}
             <div>
               <div className="form-container bg-white rounded-lg p-6 my-16 shadow-xl">
                 <div>{props.children}</div>
@@ -106,8 +186,26 @@ export default function Layout(props) {
             </div>
           </div>
           <div className="flex text-white text-6xl">
-              <div className="mx-4 cursor-pointer" onClick={() => window.open("https://instagram.com/" + siteMetadata.instagramUsername)}><FaInstagram /></div>
-              <div className="mx-4 cursor-pointer" onClick={() => window.open("https://facebook.com/" + siteMetadata.facebookUsername)}><FaFacebookSquare /></div>
+            <div
+              className="mx-4 cursor-pointer"
+              onClick={() =>
+                window.open(
+                  "https://instagram.com/" + siteMetadata.instagramUsername
+                )
+              }
+            >
+              <FaInstagram />
+            </div>
+            <div
+              className="mx-4 cursor-pointer"
+              onClick={() =>
+                window.open(
+                  "https://facebook.com/" + siteMetadata.facebookUsername
+                )
+              }
+            >
+              <FaFacebookSquare />
+            </div>
           </div>
           <div className="m-2 text-center">
             {pageData.map(item => {
