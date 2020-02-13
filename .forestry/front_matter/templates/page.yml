@@ -4,4 +4,8 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Titel
+- name: mainmenu
+  type: boolean
+  label: Huvudmenyn
+  description: Ska sidan visas i huvudmenyn, eller där nere?
