@@ -10,8 +10,8 @@ sections:
   path: content/menu/menu.json
   label: Menu Page
 - type: directory
-  path: content/posts
-  label: Blog Posts
+  path: content/pages
+  label: Pages
   create: documents
   match: "**/*"
   new_doc_ext: md
