@@ -1,9 +1,9 @@
 {
-  "week_number": 8,
+  "week_number": 9,
   "delivery_info": "Du kan lägga en order antingen via **mail** eller via **telefon**.",
   "delivery_price": 40,
-  "delivery_date": "2020-02-19",
-  "last_order_date": "2020-02-15",
+  "delivery_date": "2020-02-26",
+  "last_order_date": "2020-02-21",
   "last_order_time": "12:00",
   "delivery_start_time": "15",
   "delivery_end_time": "18",
@@ -14,8 +14,8 @@
   "menu_information": "Som vanligt är det **du som bestämmer** hur många kylda rätter du önskar att beställa. Maten lagas av de duktiga kockarna på **Redimat**.",
   "menu": [
     {
-      "food": "Gulaschsoppa",
-      "description": "på högrev med creme fraiche",
+      "food": "Köttfärslimpa",
+      "description": "med kokt potatis och gräddsås",
       "price": 80
     },
     {
