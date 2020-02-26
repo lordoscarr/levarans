@@ -14,8 +14,8 @@
   "menu_information": "Som vanligt är det **du som bestämmer** hur många kylda rätter du önskar att beställa. Maten lagas av de duktiga kockarna på **Redimat**.",
   "menu": [
     {
-      "food": "Lågtempererad fläskfilé med pepparsås och rostad potatis",
-      "description": "",
+      "food": "Lågtempererad fläskfilé ",
+      "description": "med pepparsås och rostad potatis",
       "price": 80
     },
     {
