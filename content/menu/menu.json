@@ -1,5 +1,5 @@
 {
-  "week_number": 12,
+  "week_number": 13,
   "delivery_info": "Du kan lägga en order antingen via **mail** eller via **telefon**.",
   "delivery_price": 40,
   "delivery_date": "2020-03-25",
@@ -19,8 +19,8 @@
       "price": 90
     },
     {
-      "food": "Panerad fisk",
-      "description": "med remouladsås och potatis",
+      "food": "Fiskqueneller",
+      "description": "med potatis och dillsås",
       "price": 90
     },
     {
